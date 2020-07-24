@@ -23,11 +23,11 @@ if ( ! function_exists( 'aviary_setup' ) ) :
 	function aviary_setup() {
 		/*
 		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
+		 * Translations can be filed in the /resources/lang/ directory.
 		 * If you're building a theme based on Aviary, use a find and replace
 		 * to change 'aviary' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'aviary', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'aviary', get_template_directory() . '/resources/lang' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -143,10 +143,10 @@ add_action( 'widgets_init', 'aviary_widgets_init' );
  * Enqueue scripts and styles.
  */
 function aviary_scripts() {
-	wp_enqueue_style( 'aviary-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'aviary-style', get_template_directory_uri() . '/public/css/theme.css', array(), _S_VERSION );
 	wp_style_add_data( 'aviary-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'aviary-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'aviary-navigation', get_template_directory_uri() . '/resources/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -157,33 +157,33 @@ add_action( 'wp_enqueue_scripts', 'aviary_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/theme/custom-header.php';
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/theme/template-tags.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
-require get_template_directory() . '/inc/template-functions.php';
+require get_template_directory() . '/theme/template-functions.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/theme/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+	require get_template_directory() . '/theme/jetpack.php';
 }
 
 /**
  * Load WooCommerce compatibility file.
  */
 if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
+	require get_template_directory() . '/theme/woocommerce.php';
 }

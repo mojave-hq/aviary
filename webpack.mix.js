@@ -15,8 +15,8 @@ require('laravel-mix-purgecss');
  */
 
 mix
-    .js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css')
+    .js('resources/js/theme.js', 'public/js')
+    .postCss('resources/css/theme.css', 'public/css')
     .tailwind('./tailwind.config.js');
 
 if (mix.inProduction()) {

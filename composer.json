@@ -26,10 +26,10 @@
     "scripts": {
         "lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
         "lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
-        "make-pot": "wp i18n make-pot . languages/_s.pot"
+        "make-pot": "wp i18n make-pot . resources/lang/aviary.pot"
     },
     "support": {
-        "issues": "https://github.com/Automattic/_s/issues",
-        "source": "https://github.com/Automattic/_s"
+        "issues": "https://github.com/mojave-hq/aviary/issues",
+        "source": "https://github.com/mojave-hq/aviary"
     }
 }

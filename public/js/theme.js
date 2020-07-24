@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/css/app.css":
-/*!*******************************!*\
-  !*** ./resources/css/app.css ***!
-  \*******************************/
+/***/ "./resources/css/theme.css":
+/*!*********************************!*\
+  !*** ./resources/css/theme.css ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -97,10 +97,10 @@
 
 /***/ }),
 
-/***/ "./resources/js/app.js":
-/*!*****************************!*\
-  !*** ./resources/js/app.js ***!
-  \*****************************/
+/***/ "./resources/js/theme.js":
+/*!*******************************!*\
+  !*** ./resources/js/theme.js ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -109,14 +109,14 @@
 /***/ }),
 
 /***/ 0:
-/*!***********************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/css/app.css ***!
-  \***********************************************************/
+/*!***************************************************************!*\
+  !*** multi ./resources/js/theme.js ./resources/css/theme.css ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/fox/Projects/_themes/aviary/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/fox/Projects/_themes/aviary/resources/css/app.css */"./resources/css/app.css");
+__webpack_require__(/*! /Users/fox/Projects/_themes/aviary/resources/js/theme.js */"./resources/js/theme.js");
+module.exports = __webpack_require__(/*! /Users/fox/Projects/_themes/aviary/resources/css/theme.css */"./resources/css/theme.css");
 
 
 /***/ })
