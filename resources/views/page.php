@@ -12,7 +12,8 @@
  * @package Aviary
  */
 
-get_header();
+do_action('get_header');
+include('partials/header.php');
 ?>
 
 	<main id="primary" class="site-main">
@@ -21,7 +22,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'resources/views/content', 'page' );
+			get_template_part( 'resources/views/partials/content', 'page' );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -34,5 +35,8 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
-get_footer();
+do_action('get_sidebar');
+include('partials/sidebar.php');
+
+do_action('get_footer');
+include('partials/footer.php');

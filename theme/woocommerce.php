@@ -43,7 +43,7 @@ add_action( 'after_setup_theme', 'aviary_woocommerce_setup' );
  * @return void
  */
 function aviary_woocommerce_scripts() {
-	wp_enqueue_style( 'aviary-woocommerce-style', get_template_directory_uri() . '/resources/woocommerce.css', array(), _S_VERSION );
+	wp_enqueue_style( 'aviary-woocommerce-style', get_template_directory_uri() . '/public/css/woocommerce.css', array(), _S_VERSION );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {

@@ -7,7 +7,8 @@
  * @package Aviary
  */
 
-get_header();
+do_action('get_header');
+include('partials/header.php');
 ?>
 
 	<main id="primary" class="site-main">
@@ -33,7 +34,7 @@ get_header();
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'resources/views/content', 'search' );
+				get_template_part( 'resources/views/partials/content', 'search' );
 
 			endwhile;
 
@@ -41,7 +42,7 @@ get_header();
 
 		else :
 
-			get_template_part( 'resources/views/content', 'none' );
+			get_template_part( 'resources/views/partials/content', 'none' );
 
 		endif;
 		?>
@@ -49,5 +50,8 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
-get_footer();
+do_action('get_sidebar');
+include('partials/sidebar.php');
+
+do_action('get_footer');
+include('partials/footer.php');

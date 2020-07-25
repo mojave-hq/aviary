@@ -1,4 +1,7 @@
 <?php
+
+namespace Theme;
+
 /**
  * Aviary functions and definitions
  *
@@ -6,6 +9,46 @@
  *
  * @package Aviary
  */
+
+define( 'THEME_TEMPLATE_DIRECTORY', 'resources/views' );
+
+array_map(function ($type) {
+	add_filter("{$type}_template_hierarchy", __NAMESPACE__.'\\views');
+}, [
+	'index', '404', 'archive', 'author', 'category', 'tag', 'taxonomy', 'date', 'home',
+    'frontpage', 'page', 'paged', 'search', 'single', 'singular', 'attachment', 'embed'
+]);
+
+/**
+ * @param string|string[] $templates Relative path to possible template files
+ * @return string Location of the template
+ */
+function locate_template($templates)
+{
+    return \locate_template(views($templates));
+}
+
+function views( $templates = [] ) {
+	if( empty( $templates ) || ! is_array( $templates ) ){
+        return $templates;
+	}
+
+	if (count($templates) < 3 && $templates[0] !== 'archive.php' && $templates[1] !== 'archive.php') {
+		return $templates;
+	}
+	
+    $page_template_id = 0;
+    $count = count( $templates );
+    if( $templates[0] === get_page_template_slug() ) {
+        $page_template_id = 1;
+    }
+
+    for( $i = $page_template_id; $i < $count ; $i++ ) {  
+		$templates[$i] = THEME_TEMPLATE_DIRECTORY . '/' . $templates[$i];
+    }
+
+    return $templates;
+}
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
@@ -102,7 +145,7 @@ if ( ! function_exists( 'aviary_setup' ) ) :
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'aviary_setup' );
+add_action( 'after_setup_theme', __NAMESPACE__.'\\aviary_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -117,7 +160,7 @@ function aviary_content_width() {
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 	$GLOBALS['content_width'] = apply_filters( 'aviary_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'aviary_content_width', 0 );
+add_action( 'after_setup_theme', __NAMESPACE__.'\\aviary_content_width', 0 );
 
 /**
  * Register widget area.
@@ -137,7 +180,7 @@ function aviary_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'aviary_widgets_init' );
+add_action( 'widgets_init', __NAMESPACE__.'\\aviary_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
@@ -152,7 +195,7 @@ function aviary_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'aviary_scripts' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__.'\\aviary_scripts' );
 
 /**
  * Implement the Custom Header feature.

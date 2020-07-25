@@ -97,6 +97,17 @@
 
 /***/ }),
 
+/***/ "./resources/css/woocommerce.css":
+/*!***************************************!*\
+  !*** ./resources/css/woocommerce.css ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/js/theme.js":
 /*!*******************************!*\
   !*** ./resources/js/theme.js ***!
@@ -109,14 +120,15 @@
 /***/ }),
 
 /***/ 0:
-/*!***************************************************************!*\
-  !*** multi ./resources/js/theme.js ./resources/css/theme.css ***!
-  \***************************************************************/
+/*!***********************************************************************************************!*\
+  !*** multi ./resources/js/theme.js ./resources/css/theme.css ./resources/css/woocommerce.css ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/fox/Projects/_themes/aviary/resources/js/theme.js */"./resources/js/theme.js");
-module.exports = __webpack_require__(/*! /Users/fox/Projects/_themes/aviary/resources/css/theme.css */"./resources/css/theme.css");
+__webpack_require__(/*! /Users/fox/Projects/_themes/aviary/resources/css/theme.css */"./resources/css/theme.css");
+module.exports = __webpack_require__(/*! /Users/fox/Projects/_themes/aviary/resources/css/woocommerce.css */"./resources/css/woocommerce.css");
 
 
 /***/ })

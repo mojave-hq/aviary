@@ -14,6 +14,11 @@
             "homepage": "https://github.com/Automattic/_s/graphs/contributors"
         }
     ],
+    "autoload": {
+        "psr-4": {
+          "Theme\\": "theme/"
+        }
+    },
     "require": {
         "php": ">=5.6"
     },
