@@ -21,7 +21,6 @@
     "cross-env": "^7.0.2",
     "dir-archiver": "^1.1.1",
     "laravel-mix": "^5.0.4",
-    "laravel-mix-purgecss": "^5.0.0",
     "laravel-mix-tailwind": "^0.1.0",
     "tailwindcss": "^1.5.2",
     "vue-template-compiler": "^2.6.11"

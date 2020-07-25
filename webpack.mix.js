@@ -1,7 +1,7 @@
 const mix = require('laravel-mix');
 
 require('laravel-mix-tailwind');
-require('laravel-mix-purgecss');
+// require('laravel-mix-purgecss');
 
 /*
  |--------------------------------------------------------------------------
@@ -19,14 +19,6 @@ mix
     .postCss('resources/css/theme.css', 'public/css')
     .postCss('resources/css/woocommerce.css', 'public/css')
     .tailwind('./tailwind.config.js');
-
-if (mix.inProduction()) {
-    mix
-        .version()
-        .purgeCss({
-            defaultExtractor: content => content.match(/[\w-/.:]+(?<!:)/g) || []
-        });
-}
 
 
 // Full API
