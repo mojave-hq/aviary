@@ -14,10 +14,11 @@ require('laravel-mix-tailwind');
  */
 
 mix
-    .js('resources/js/theme.js', 'public/js')
+    .react('resources/js/theme.js', 'public/js')
     .postCss('resources/css/theme.css', 'public/css')
     .postCss('resources/css/woocommerce.css', 'public/css')
-    .tailwind('./tailwind.config.js');
+    .tailwind('./tailwind.config.js')
+    .setPublicPath('public');
 
 
 // Full API
