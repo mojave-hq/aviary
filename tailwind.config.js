@@ -1,8 +1,12 @@
 module.exports = {
-  purge: [
-    './resources/**/*.html',
-    './resources/**/*.php',
-  ],
+  purge: {
+    enabled: true,
+    content: [
+      './resources/**/*.php',
+      './resources/**/*.html',
+      './resources/**/*.js',
+      './resources/**/*.jsx',
+  ]},
   theme: {
     extend: {},
   },

@@ -1,7 +1,7 @@
 {
   "name": "aviary",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Aviary is a modern WordPress starter theme based on Underscores that comes with Tailwind CSS.",
   "author": "Mojave HQ",
   "license": "GPL-2.0-or-later",
   "keywords": [
@@ -22,8 +22,7 @@
     "dir-archiver": "^1.1.1",
     "laravel-mix": "^5.0.4",
     "laravel-mix-tailwind": "^0.1.0",
-    "tailwindcss": "^1.5.2",
-    "vue-template-compiler": "^2.6.11"
+    "tailwindcss": "^1.5.2"
   },
   "scripts": {
     "dev": "npm run development",
