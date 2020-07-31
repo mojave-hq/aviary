@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+ * The template for displaying all pages.
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -8,35 +8,31 @@
  * different template.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package Aviary
  */
-
 do_action('get_header');
-include('partials/header.php');
+include 'partials/header.php';
 ?>
 
 	<main id="primary" class="site-main">
 
 		<?php
-		while ( have_posts() ) :
-			the_post();
+        while (have_posts()) {
+            the_post();
 
-			get_template_part( 'resources/views/partials/content', 'page' );
+            get_template_part('resources/views/partials/content', 'page');
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
+            // If comments are open or we have at least one comment, load up the comment template.
+            if (comments_open() || get_comments_number()) {
+                comments_template();
+            }
+        } // End of the loop.
+        ?>
 
 	</main><!-- #main -->
 
 <?php
 do_action('get_sidebar');
-include('partials/sidebar.php');
+include 'partials/sidebar.php';
 
 do_action('get_footer');
-include('partials/footer.php');
+include 'partials/footer.php';

@@ -15,7 +15,7 @@ function aviary_setup()
      * If you're building a theme based on Aviary, use a find and replace
      * to change 'aviary' to the name of your theme in all the template files.
      */
-    load_theme_textdomain('aviary', get_template_directory() . '/resources/lang');
+    load_theme_textdomain('aviary', get_template_directory().'/resources/lang');
 
     // Add default posts and comments RSS feed links to head.
     add_theme_support('automatic-feed-links');
@@ -37,9 +37,9 @@ function aviary_setup()
 
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus(
-        array(
+        [
             'menu-1' => esc_html__('Primary', 'aviary'),
-        )
+        ]
     );
 
     /**
@@ -48,7 +48,7 @@ function aviary_setup()
      */
     add_theme_support(
         'html5',
-        array(
+        [
             'search-form',
             'comment-form',
             'comment-list',
@@ -56,7 +56,7 @@ function aviary_setup()
             'caption',
             'style',
             'script',
-        )
+        ]
     );
 
     // Set up the WordPress core custom background feature.
@@ -64,15 +64,15 @@ function aviary_setup()
         'custom-background',
         apply_filters(
             'aviary_custom_background_args',
-            array(
+            [
                 'default-color' => 'ffffff',
                 'default-image' => '',
-            )
+            ]
         )
     );
 
     // Add theme support for selective refresh for widgets.
-    add_theme_support( 'customize-selective-refresh-widgets' );
+    add_theme_support('customize-selective-refresh-widgets');
 
     /**
      * Add support for core custom logo.
@@ -81,33 +81,33 @@ function aviary_setup()
      */
     add_theme_support(
         'custom-logo',
-        array(
+        [
             'height'      => 250,
             'width'       => 250,
             'flex-width'  => true,
             'flex-height' => true,
-        )
+        ]
     );
 }
 
 /**
- * Undocumented function
+ * Undocumented function.
  */
 function aviary_add_templates_directory_to_hierarchy(array $templates)
 {
     return call_user_func_array(
         'array_merge',
-        array_map(function($template) {
+        array_map(function ($template) {
             return ["resources/views/{$template}", $template];
         }, $templates)
     );
 }
 
 array_map(function ($type) {
-	add_filter("{$type}_template_hierarchy", 'aviary_add_templates_directory_to_hierarchy');
+    add_filter("{$type}_template_hierarchy", 'aviary_add_templates_directory_to_hierarchy');
 }, [
-	'index', '404', 'archive', 'author', 'category', 'tag', 'taxonomy', 'date', 'home',
-    'frontpage', 'page', 'paged', 'search', 'single', 'singular', 'attachment', 'embed'
+    'index', '404', 'archive', 'author', 'category', 'tag', 'taxonomy', 'date', 'home',
+    'frontpage', 'page', 'paged', 'search', 'single', 'singular', 'attachment', 'embed',
 ]);
 
 function aviary_get_partial($type, $name = null)
