@@ -8,7 +8,7 @@
     "WordPress",
     "Theme"
   ],
-  "homepage": "https://github.com/mojave-hq/aviary#readme",
+  "homepage": "https://mojavehq.com/themes/aviary",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mojave-hq/aviary.git"
@@ -16,6 +16,7 @@
   "bugs": {
     "url": "https://github.com/mojave-hq/aviary/issues"
   },
+  "main": "resources/js/theme.js",
   "devDependencies": {
     "@wordpress/scripts": "^9.0.0",
     "cross-env": "^7.0.2",

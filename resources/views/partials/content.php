@@ -32,7 +32,7 @@
 		<?php
         the_content(
                 sprintf(
-                wp_kses(
+                    wp_kses(
                     /* translators: %s: Name of current post. Only visible to screen readers */
                     __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'aviary'),
                     [
@@ -41,8 +41,8 @@
                         ],
                     ]
                 ),
-                wp_kses_post(get_the_title())
-            )
+                    wp_kses_post(get_the_title())
+                )
             );
 
         wp_link_pages(
@@ -52,6 +52,9 @@
             ]
         );
         ?>
+
+        <div id="react__votes"></div>
+    
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
