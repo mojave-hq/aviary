@@ -52,7 +52,9 @@
             ]
         );
         ?>
+
         <div id="react__votes"></div>
+    
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
