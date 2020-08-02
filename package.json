@@ -16,6 +16,7 @@
   "bugs": {
     "url": "https://github.com/mojave-hq/aviary/issues"
   },
+  "main": "resources/js/theme.js",
   "devDependencies": {
     "@wordpress/scripts": "^9.0.0",
     "cross-env": "^7.0.2",
