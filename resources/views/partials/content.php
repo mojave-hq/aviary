@@ -35,12 +35,12 @@
                     wp_kses(
                     /* translators: %s: Name of current post. Only visible to screen readers */
                     __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'aviary'),
-                    [
-                        'span' => [
-                            'class' => [],
-                        ],
+                        [
+                            'span' => [
+                                'class' => [],
+                            ],
                     ]
-                ),
+                    ),
                     wp_kses_post(get_the_title())
                 )
             );
