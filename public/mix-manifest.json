@@ -1,5 +1,6 @@
 {
-    "/js/theme.js": "/js/theme.js",
+    "/js/customizer.js": "/js/customizer.js",
     "/css/theme.css": "/css/theme.css",
-    "/css/woocommerce.css": "/css/woocommerce.css"
+    "/css/woocommerce.css": "/css/woocommerce.css",
+    "/js/theme.js": "/js/theme.js"
 }

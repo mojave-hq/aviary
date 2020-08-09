@@ -15,6 +15,7 @@ require('laravel-mix-tailwind');
 
 mix
     .react('resources/js/theme.js', 'public/js')
+    .js('resources/js/customizer.js', 'public/js')
     .postCss('resources/css/theme.css', 'public/css')
     .postCss('resources/css/woocommerce.css', 'public/css')
     .tailwind('./tailwind.config.js')

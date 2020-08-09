@@ -4,9 +4,8 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  */
-do_action('get_header');
-include 'partials/header.php';
-?>
+
+Aviary\get_partial('header'); ?>
 
 	<main id="primary" class="site-main">
 
@@ -55,8 +54,6 @@ include 'partials/header.php';
 	</main><!-- #main -->
 
 <?php
-do_action('get_sidebar');
-include 'partials/sidebar.php';
 
-do_action('get_footer');
-include 'partials/footer.php';
+Aviary\get_partial('sidebar');
+Aviary\get_partial('footer');

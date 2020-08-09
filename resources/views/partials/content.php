@@ -19,18 +19,17 @@
             ?>
 			<div class="entry-meta">
 				<?php
-                aviary_posted_on();
-            aviary_posted_by(); ?>
+                Aviary\posted_on();
+                Aviary\posted_by(); ?>
 			</div><!-- .entry-meta -->
-		<?php
-        } ?>
+		<?php } ?>
 	</header><!-- .entry-header -->
 
-	<?php aviary_post_thumbnail(); ?>
+	<?php Aviary\post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
-        the_content(
+            the_content(
                 sprintf(
                     wp_kses(
                     /* translators: %s: Name of current post. Only visible to screen readers */
@@ -45,12 +44,12 @@
                 )
             );
 
-        wp_link_pages(
-            [
-                'before' => '<div class="page-links">'.esc_html__('Pages:', 'aviary'),
-                'after'  => '</div>',
-            ]
-        );
+            wp_link_pages(
+                [
+                    'before' => '<div class="page-links">'.esc_html__('Pages:', 'aviary'),
+                    'after'  => '</div>',
+                ]
+            );
         ?>
 
         <div id="react__votes"></div>
@@ -58,6 +57,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php aviary_entry_footer(); ?>
+		<?php Aviary\entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -19,8 +19,7 @@
 
 	<body <?php body_class(); ?>>
 		<div>
-			<?php wp_body_open(); ?>
-
+			<?php Aviary\wp_body_open(); ?>
 
 			<div id="page" class="site">
 				<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'aviary'); ?></a>
@@ -49,12 +48,10 @@
 					<nav id="site-navigation" class="main-navigation">
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'aviary'); ?></button>
 						<?php
-                        wp_nav_menu(
-                                [
-                                    'theme_location' => 'menu-1',
-                                    'menu_id'        => 'primary-menu',
-                                ]
-                            );
+                        	wp_nav_menu([
+								'theme_location' => 'primary',
+								'menu_id' => 'primary-menu',
+							]);
                         ?>
 					</nav><!-- #site-navigation -->
 				</header><!-- #masthead -->
