@@ -9,7 +9,6 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
-
 Aviary\get_partial('header'); ?>
 
 	<main id="primary" class="site-main">

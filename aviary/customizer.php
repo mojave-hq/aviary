@@ -17,12 +17,12 @@ add_action('customize_register', function ($wp_customize) {
 
     if (isset($wp_customize->selective_refresh)) {
         $wp_customize->selective_refresh->add_partial('blogname', [
-                'selector' => '.site-title a',
-                'render_callback' => function () { bloginfo('name'); },
+            'selector'        => '.site-title a',
+            'render_callback' => function () { bloginfo('name'); },
         ]);
 
         $wp_customize->selective_refresh->add_partial('blogdescription', [
-            'selector' => '.site-description',
+            'selector'        => '.site-description',
             'render_callback' => function () { bloginfo('description'); },
         ]);
     }

@@ -17,15 +17,17 @@ namespace Aviary;
  * @return void
  */
 add_action('after_setup_theme', function () {
-    add_theme_support('woocommerce', [
+    add_theme_support(
+        'woocommerce',
+        [
             'thumbnail_image_width' => 150,
-            'single_image_width' => 300,
-            'product_grid' => [
-                'default_rows' => 3,
-                'min_rows' => 1,
+            'single_image_width'    => 300,
+            'product_grid'          => [
+                'default_rows'    => 3,
+                'min_rows'        => 1,
                 'default_columns' => 4,
-                'min_columns' => 1,
-                'max_columns' => 6,
+                'min_columns'     => 1,
+                'max_columns'     => 6,
             ],
         ]
     );
@@ -92,7 +94,7 @@ add_filter('body_class', function ($classes) {
 add_filter('woocommerce_output_related_products_args', function ($args) {
     $defaults = [
         'posts_per_page' => 3,
-        'columns' => 3,
+        'columns'        => 3,
     ];
 
     $args = wp_parse_args($defaults, $args);
@@ -208,7 +210,7 @@ if (!function_exists('aviary_woocommerce_header_cart')) {
                     'title' => '',
                 ];
 
-                the_widget('WC_Widget_Cart', $instance); ?>
+        the_widget('WC_Widget_Cart', $instance); ?>
 			</li>
 		</ul>
 		<?php

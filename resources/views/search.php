@@ -4,7 +4,6 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  */
-
 Aviary\get_partial('header'); ?>
 
 	<main id="primary" class="site-main">

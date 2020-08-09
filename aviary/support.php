@@ -181,7 +181,8 @@ function post_thumbnail()
         <?php the_post_thumbnail(); ?>
             </div><!-- .post-thumbnail -->
 
-        <?php } else { ?>
+        <?php
+    } else { ?>
 
         <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
         <?php

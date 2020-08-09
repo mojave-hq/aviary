@@ -58,7 +58,8 @@ add_action('after_setup_theme', function () {
     ]);
 
     // Set up the WordPress core custom background feature.
-    add_theme_support( 'custom-background',
+    add_theme_support(
+        'custom-background',
         apply_filters('aviary_custom_background_args', [
             'default-color' => 'ffffff',
             'default-image' => '',
@@ -81,9 +82,6 @@ add_action('after_setup_theme', function () {
     ]);
 });
 
-/**
- * 
- */
 array_map(function ($type) {
     add_filter("{$type}_template_hierarchy", function (array $templates) {
         return call_user_func_array(

@@ -4,7 +4,6 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  */
-
 Aviary\get_partial('header'); ?>
 
 	<main id="primary" class="site-main">

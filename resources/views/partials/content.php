@@ -20,9 +20,10 @@
 			<div class="entry-meta">
 				<?php
                 Aviary\posted_on();
-                Aviary\posted_by(); ?>
+            Aviary\posted_by(); ?>
 			</div><!-- .entry-meta -->
-		<?php } ?>
+		<?php
+        } ?>
 	</header><!-- .entry-header -->
 
 	<?php Aviary\post_thumbnail(); ?>

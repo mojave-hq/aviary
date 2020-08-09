@@ -11,9 +11,6 @@ if (!defined('AVIARY_VERSION')) {
     define('AVIARY_VERSION', wp_get_theme()->version);
 }
 
-/**
- * 
- */
 require get_template_directory().'/aviary/setup.php';
 
 /**
@@ -23,7 +20,6 @@ require get_template_directory().'/aviary/setup.php';
  *
  * @global int $content_width
  */
-
 add_action('after_setup_theme', function () {
     // This variable is intended to be overruled from themes.
     // Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
