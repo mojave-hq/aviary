@@ -3,7 +3,7 @@
  * Functions which enhance the theme.
  */
 
-namespace Aviary;
+namespace MojaveHQ\Aviary\Theme;
 
 /**
  * Adds custom classes to the array of body classes.

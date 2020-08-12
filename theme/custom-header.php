@@ -9,7 +9,7 @@
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  */
 
-namespace Aviary;
+namespace MojaveHQ\Aviary\Theme;
 
 /**
  * Set up the WordPress core custom header feature.

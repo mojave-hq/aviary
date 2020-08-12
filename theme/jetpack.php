@@ -5,7 +5,7 @@
  * @link https://jetpack.com/
  */
 
-namespace Aviary;
+namespace MojaveHQ\Aviary\Theme;
 
 /**
  * Jetpack setup function.

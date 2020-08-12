@@ -13,20 +13,20 @@
 		<?php if ('post' === get_post_type()) { ?>
 		<div class="entry-meta">
 			<?php
-            Aviary\posted_on();
-            Aviary\posted_by();
+            MojaveHQ\Aviary\Theme\posted_on();
+            MojaveHQ\Aviary\Theme\posted_by();
             ?>
 		</div><!-- .entry-meta -->
 		<?php } ?>
 	</header><!-- .entry-header -->
 
-	<?php Aviary\post_thumbnail(); ?>
+	<?php MojaveHQ\Aviary\Theme\post_thumbnail(); ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php Aviary\entry_footer(); ?>
+		<?php MojaveHQ\Aviary\Theme\entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

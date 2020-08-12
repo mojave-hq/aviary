@@ -5,7 +5,7 @@
  * @link https://woocommerce.com/
  */
 
-namespace Aviary;
+namespace MojaveHQ\Aviary\Theme;
 
 /**
  * WooCommerce setup function.
