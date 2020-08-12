@@ -20,7 +20,7 @@
     ],
     "autoload": {
         "psr-4": {
-          "MojaveHQ\\Aviary\\Theme": "theme/"
+          "MojaveHQ\\Aviary\\Theme\\": "theme/"
         }
     },
     "require": {
