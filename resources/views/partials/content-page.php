@@ -11,7 +11,7 @@
 		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 	</header><!-- .entry-header -->
 
-	<?php Aviary\post_thumbnail(); ?>
+	<?php MojaveHQ\Aviary\Theme\post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

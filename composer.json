@@ -7,7 +7,7 @@
         "Themes"
     ],
     "homepage": "https://github.com/mojave_hq/aviary",
-    "license": "GPL-2.0-or-later",
+    "license": "MIT",
     "authors": [
         {
             "name": "Mojave HQ",
@@ -20,7 +20,7 @@
     ],
     "autoload": {
         "psr-4": {
-          "Aviary\\": "aviary/"
+          "MojaveHQ\\Aviary\\Theme": "theme/"
         }
     },
     "require": {

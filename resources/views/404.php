@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  */
-Aviary\get_partial('header'); ?>
+MojaveHQ\Aviary\Theme\get_partial('header'); ?>
 
 	<main id="primary" class="site-main">
 
@@ -54,5 +54,5 @@ Aviary\get_partial('header'); ?>
 
 <?php
 
-Aviary\get_partial('sidebar');
-Aviary\get_partial('footer');
+MojaveHQ\Aviary\Theme\get_partial('sidebar');
+MojaveHQ\Aviary\Theme\get_partial('footer');

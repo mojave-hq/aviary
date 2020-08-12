@@ -1,6 +1,6 @@
 <?php
 
-namespace Aviary;
+namespace MojaveHQ\Aviary\Theme;
 
 add_action('wp_enqueue_scripts', function () {
     // JS

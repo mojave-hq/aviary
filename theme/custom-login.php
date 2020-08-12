@@ -1,6 +1,6 @@
 <?php
 
-namespace Aviary;
+namespace MojaveHQ\Aviary\Theme;
 
 /**
  * Load the CSS.
