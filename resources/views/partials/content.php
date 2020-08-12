@@ -20,7 +20,7 @@
 			<div class="entry-meta">
 				<?php
                 MojaveHQ\Aviary\Theme\posted_on();
-                MojaveHQ\Aviary\Theme\posted_by(); ?>
+            MojaveHQ\Aviary\Theme\posted_by(); ?>
 			</div><!-- .entry-meta -->
 		<?php
         } ?>
